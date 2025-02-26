@@ -21,5 +21,10 @@ app.post('/update-location', (req, res) => {
     res.status(200).json({ message: "Location received successfully" });
 });
 
+app.get("/", (req, res) => {
+    res.send("✅ GPS Tracker API is running!");
+});
+
+
 // تشغيل السيرفر
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
